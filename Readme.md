@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Тимур Ахмедов](https://up.htmlacademy.ru/htmlcss/27/user/768253).
-* Наставник: [Павел Бубликов](https://htmlacademy.ru/profile/pbuba).
+* Наставник: [Павел Бубликов](https://up.htmlacademy.ru/htmlcss/27/user/336925).
 
 ---
 
