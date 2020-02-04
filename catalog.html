@@ -8,11 +8,11 @@
 
 <body>
   <header>
-    <a href="index.html"><img style="background-color: #ee3643" src="img/logo-technomart.svg" alt="Логотип магазина строительных материалов Техномарт"></a>
+    <a href="index.html"><img src="img/logo-technomart.svg" alt="Логотип магазина строительных материалов Техномарт"></a>
 
     <form action="" method="post">
       <input type="search" name="search" id="search" placeholder="Поиск">
-      <button type="submit">Искать</button> <!-- Вместо текста будет декоративная иконка -->
+      <button type="submit">Искать</button>
     </form>
 
     <a href="#">Закладки: 0</a>
@@ -22,9 +22,8 @@
     <p>Интернет-магазин строительных материалов и инструментов для ремонта <a href="tel:+78125550555">+7 (812)
         555-05-55</a> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
     
-    <a href="#"></a> <!-- будет добавлена иконка пользователя -->
     <a href="#">Равшан Джамшутович</a>
-    <a href="#">Выйти из учетной записи</a> <!-- будет добавлена иконка деавторизации -->
+    <a href="#">Выйти из учетной записи</a>
     
     <ul>
       <li><a href="#">Мои заказы</a></li>
@@ -45,11 +44,11 @@
   </header>
 
   <main>
-    <h1>Каталог товаров</h1> <!-- будет визуально скрыт -->
+    <h1>Каталог товаров</h1>
 
     <ul>
       <li>
-        <a href="index.html"></a> <!-- будет добавлено декоративное изображение -->
+        <a href="index.html">Главная страница</a>
       </li>
       <li>
         <a href="#">Каталог</a>
@@ -58,7 +57,7 @@
         <a href="#">Инструмент</a>
       </li>
       <li>
-        <a href="#">Перфораторы</a>
+        <a href="">Перфораторы</a>
       </li>
     </ul>
 
@@ -66,11 +65,45 @@
       <h3>Фильтр:</h3>
       <form>
         <p>Цена:</p>
-        <!-- элементы формы для диапазона цены -->
+        <input type="range"> <!-- range для нижней границы -->
+        <input type="range"> <!-- range для верхней границы -->
+        <input type="text" name="mininput"> &ndash; <input type="text" name="maxinput">
+
         <p>Производители:</p>
-        <!-- элементы формы для выбора производителей -->
+        <ul>
+          <li>
+            <input type="checkbox" id="bosch" checked>
+            <label for="bosch">Bosch</label>
+          </li>
+          <li>
+            <input type="checkbox" id="interskol">
+            <label for="interskol">Интерскол</label>
+          </li>
+          <li>
+            <input type="checkbox" id="makita" checked>
+            <label for="makita">Makita</label>
+          </li>
+          <li>
+            <input type="checkbox" id="dewalt">
+            <label for="dewalt">Dewalt</label>
+          </li>
+          <li>
+            <input type="checkbox" id="hitachi">
+            <label for="hitachi">Hitachi</label>
+          </li>
+        </ul>
+        
         <p>Питание:</p>
-        <!-- элементы формы для типа питания -->
+        <ul>
+          <li>
+            <input type="radio" name="power" id="acum" checked>
+            <label for="acum">Аккумуляторные</label>
+          </li>
+          <li>
+            <input type="radio" name="power" id="socket">
+            <label for="socket">Сетевые</label>
+          </li>
+        </ul>
         <button type="submit">Показать</button>
       </form>
     </section>
@@ -80,12 +113,12 @@
 
       <div>
         <h3>Сортировка:</h3>
-        <p>По цене</p>
-        <p>По типу</p>
-        <p>По функционалу</p>
+        <a href="#">По цене</a>
+        <a href="#">По типу</a>
+        <a href="#">По функционалу</a>
   
-        <span>Кнопка сортировки по возрастанию</span> <!-- декоративное изображение -->
-        <span>Кнопка сортировки по возрастанию</span> <!-- декоративное изображение -->
+        <a href="#">Кнопка сортировки по возрастанию</a> <!-- декоративное изображение -->
+        <a href="#">Кнопка сортировки по возрастанию</a> <!-- декоративное изображение -->
       </div>
 
       <ul>
@@ -95,9 +128,8 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
         </li>
         <li>
           <img src="img/bosch-bfg-6000.png" alt="Перфоратор BOSCH BFG 6000">
@@ -105,9 +137,8 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
         </li>
         <li>
           <img src="img/bosch-bfg-2000.png" alt="Перфоратор BOSCH BFG 2000">
@@ -115,12 +146,10 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
 
           <span>Новый товар</span>
-          <!-- Текст визуально будет скрыт и заменен на изображение в углу карточки (label-new.jpg) -->
         </li>
         <li>
           <img src="img/bosch-bfg-3000.png" alt="Перфоратор BOSCH BFG 3000">
@@ -128,9 +157,8 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
         </li>
         <li>
           <img src="img/bosch-bfg-6000.png" alt="Перфоратор BOSCH BFG 6000">
@@ -138,12 +166,10 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
 
           <span>Новый товар</span>
-          <!-- Текст визуально будет скрыт и заменен на изображение в углу карточки (label-new.jpg) -->
         </li>
         <li>
           <img src="img/bosch-bfg-2000.png" alt="Перфоратор BOSCH BFG 2000">
@@ -151,9 +177,8 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
         </li>
         <li>
           <img src="img/bosch-bfg-3000.png" alt="Перфоратор BOSCH BFG 3000">
@@ -161,12 +186,10 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
 
           <span>Новый товар</span>
-          <!-- Текст визуально будет скрыт и заменен на изображение в углу карточки (label-new.jpg) -->
         </li>
         <li>
           <img src="img/bosch-bfg-6000.png" alt="Перфоратор BOSCH BFG 6000">
@@ -174,9 +197,8 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
         </li>
         <li>
           <img src="img/bosch-bfg-2000.png" alt="Перфоратор BOSCH BFG 2000">
@@ -184,13 +206,12 @@
           <p style="text-decoration: line-through;">22500 Р.</p>
           <a href="#">15500 Р.</a>
 
-          <!-- В статике не видны, показываются при наведении мыши на карточку товара -->
-          <a href="#">Купить</a> <!-- + Декоративное изображение корзины -->
-          <button type="button">В закладки</button>
+          <a href="#">Купить</a>
+          <a href="#">В закладки</a>
         </li>
       </ul>
 
-      <ol> <!-- или ul, т.к. ссылка на следующую страницу не является частью порядкового расположения страниц -->
+      <ul>
         <li>
           <a href="">1</a>
         </li>
@@ -203,7 +224,7 @@
         <li>
           <a href="#">Следующая страница</a>
         </li>
-      </ol>
+      </ul>
     </section>
 
     <section>
@@ -217,7 +238,7 @@
 
   <footer>
     <div>
-      <a href="index.html"><img style="background-color: #ee3643" src="img/logo-technomart.svg" alt="Логотип магазина строительных материалов Техномарт"></a>
+      <a href="index.html"><img src="img/logo-technomart.svg" alt="Логотип магазина строительных материалов Техномарт"></a>
 
       <p>
         г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8<br>
@@ -244,15 +265,12 @@
       <ul>
         <li>
           <a href="#">Ссылка на страницу Техномарта в Вконтакте</a>
-          <!-- Декоративное изображение иконки Вконтакте -->
         </li>
         <li>
           <a href="#">Ссылка на страницу Техномарта в Фейсбуке</a>
-          <!-- Декоративное изображение иконки Фейсбука -->
         </li>
         <li>
           <a href="#">Ссылка на страницу Техномарта в Инстаграме</a>
-          <!-- Декоративное изображение иконки Инстаграма -->
         </li>
       </ul>
 
