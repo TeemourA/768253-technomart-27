@@ -10,7 +10,7 @@
   <header>
     <a href=""><img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип магазина строительных материалов Техномарт"></a>
 
-    <form action="" method="post"> <!-- Можно гет, т.к. это поисковой запрос и может понадобится отправка ссылки с результатом поиска -->
+    <form action="https://echo.htmlacademy.ru" method="GET">
       <input type="search" name="search" id="search" placeholder="Поиск">
       <button type="submit">Искать</button>
     </form>
@@ -266,13 +266,13 @@
     </div>
   </footer>
   
-  <div class="visually-hidden">
+  <div>
     <img src="img/map-popup.png" width="940" height="440">
     <button type="button">Закрыть</button>
   </div>
 
   <div>
-    <form>
+    <form action="https://echo.htmlacademy.ru" method="POST">
       <lable for="name">Ваше имя:</lable>
       <input type="text" name="name" id="name" placeholder="Имя Фамилия">
 
@@ -283,8 +283,8 @@
       <textarea name="feedback" id="feedback" placeholder="В свободной форме" ></textarea>
 
       <button type="submit">Отправить</button>
-      <button type="button">Закрыть</button>
     </form>
+    <button type="button">Закрыть</button>
   </div>
 
 </body>
