@@ -15,39 +15,43 @@
 <body>
   <header class="header">
     <div class="header__menu">
-      <a class="header__logo" href="">
-        <img src="img/logo-technomart.svg" width="109" height="19"
-          alt="Логотип магазина строительных материалов Техномарт">
-      </a>
+      <div class="header__menu-wrapper">
+        <a class="header__logo" href="">
+          <img src="img/logo-technomart.svg" width="109" height="19"
+            alt="Логотип магазина строительных материалов Техномарт">
+        </a>
 
-      <form class="header__search-form search-form" action="https://echo.htmlacademy.ru" method="get">
-        <input class="search-form__input" type="search" name="search" id="search" placeholder="Поиск:">
-        <button class="search-form__btn visually-hidden" type="submit">Искать</button>
-      </form>
+        <form class="header__search-form search-form" action="https://echo.htmlacademy.ru" method="get">
+          <input class="search-form__input" type="search" name="search" id="search" placeholder="Поиск:">
+          <button class="search-form__btn visually-hidden" type="submit">Искать</button>
+        </form>
 
-      <a class="header__bookmarks-btn header__menu-btn" href="#">Закладки: 0</a>
-      <a class="header__cart-btn header__menu-btn" href="#">Корзина: 0</a>
-      <a class="header__make-order-btn header__menu-btn" href="#">Оформить заказ</a>
+        <a class="header__bookmarks-btn header__menu-btn" href="#">Закладки: 0</a>
+        <a class="header__cart-btn header__menu-btn" href="#">Корзина: 0</a>
+        <a class="header__make-order-btn header__menu-btn" href="#">Оформить заказ</a>
+      </div>
     </div>
 
     <div class="header__info">
-      <p class="header__slogan">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <div class="header__info-wrapper">
+        <p class="header__slogan">Интернет-магазин строительных материалов и инструментов для ремонта</p>
 
-      <p class="header__contacts">
-        <div class="header__contacts-container">
-          <a class="header__contacts-tel" href="tel:+78125550555"><span>+7 (812) 555-05-55</span></a>
-          <span class="header__contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+        <p class="header__contacts">
+          <div class="header__contacts-container">
+            <a class="header__contacts-tel" href="tel:+78125550555"><span>+7 (812) 555-05-55</span></a>
+            <span class="header__contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+          </div>
+        </p>
+
+        <div class="header__auth_unlogged">
+          <a class="header__signin-btn" href="#">Войти</a>
+          <a class="header__signup-btn" href="#">Регистрация</a>
         </div>
-      </p>
-
-      <div class="header__auth">
-        <a class="header__signin-btn" href="#">Войти</a>
-        <a class="header__signup-btn" href="#">Регистрация</a>
       </div>
     </div>
 
     <nav class="header__nav header-nav">
-      <ul class="header-nav__list">
+      <ul class="header-nav__list header-nav__wrapper">
         <li class="header-nav__item">
           <a class="header-nav__link" href="#">Главная</a>
         </li>
@@ -77,58 +81,62 @@
     <h1 class="visually-hidden">Магазин строительных материалов «Техномарт»</h1>
 
     <section class="props">
-      <h2 class="visually-hidden">Лучшие предложения</h2>
-      <ul class="props__list">
-        <li class="props__item props__item_materials props__item_new">
-          <span class="visually-hidden">Новый раздел</span>
-          <h3 class="props__title">Материалы</h3>
-          <a class="props__btn" href="#">На любой вкус</a>
-        </li>
-        <li class="props__item props__item_tools">
-          <h3 class="props__title">Инструмент</h3>
-          <a class="props__btn" href="#">На все случаи</a>
-        </li>
-        <li class="props__item props__item_machines">
-          <h3 class="props__title">Техника</h3>
-          <a class="props__btn" href="#">Для стройки</a>
-        </li>
-        <li class="props__item props__item_discounts">
-          <h3 class="props__title">Скидки 50%</h3>
-          <a class="props__btn" href="#">На 350 товаров</a>
-        </li>
-        <li class="props__item props__item_delivery">
-          <h3 class="props__title">Доставка</h3>
-          <a class="props__btn" href="#">Бесплатно</a>
-        </li>
-      </ul>
+      <div class="props__wrapper">
+        <h2 class="visually-hidden">Лучшие предложения</h2>
+        <ul class="props__list">
+          <li class="props__item props__item_materials props__item_new">
+            <span class="visually-hidden">Новый раздел</span>
+            <h3 class="props__title">Материалы</h3>
+            <a class="props__btn" href="#">На любой вкус</a>
+          </li>
+          <li class="props__item props__item_tools">
+            <h3 class="props__title">Инструмент</h3>
+            <a class="props__btn" href="#">На все случаи</a>
+          </li>
+          <li class="props__item props__item_machines">
+            <h3 class="props__title">Техника</h3>
+            <a class="props__btn" href="#">Для стройки</a>
+          </li>
+          <li class="props__item props__item_discounts">
+            <h3 class="props__title">Скидки 50%</h3>
+            <a class="props__btn" href="#">На 350 товаров</a>
+          </li>
+          <li class="props__item props__item_delivery">
+            <h3 class="props__title">Доставка</h3>
+            <a class="props__btn" href="#">Бесплатно</a>
+          </li>
+        </ul>
 
-      <!-- Слайдер -->
-      <div class="props__slider">
-        <div class="props-slide props-slide-1">
-          <img class="props-slide__img" src="img/menu-slider-1.png" width="620" height="266"
-            alt="Изображение рабочего с дрелью BOSCH">
-          <h3 class="props-slide__title">Перфораторы</h3>
-          <p class="props-slide__text">Настоящие мужские игрушки</p>
 
-          <a class="props-slide__btn" href="#">Открыть каталог</a>
+        <!-- <div class="props__slider">
+          <div class="props-slide props-slide-1">
+            <h3 class="props-slide__title">Перфораторы</h3>
+            <p class="props-slide__text">Настоящие мужские игрушки</p>
+            <a class="props-slide__btn" href="#">Открыть каталог</a>
+
+            <img class="props-slide__img" src="img/menu-slider-1.png" width="620" height="266"
+              alt="Изображение рабочего с дрелью BOSCH">
+          </div>
+
+          <div class="props-slide props-slide-2">
+            <h3 class="props-slide__title">Дрели</h3>
+            <p class="props-slide__text">Соседям на радость!</p>
+            <a class="props-slide__btn" href="#">Открыть каталог</a>
+
+            <img class="props-slide__img" src="img/menu-slider-2.png" width="620" height="266"
+              alt="Изображение рабочего с перфоратором BOSCH">
+
+          </div> 
+
+          <button class="props-slider__prev-btn visually-hidden" type="button">Назад</button>
+          <button class="props-slider__next-btn visually-hidden" type="button">Вперед</button>
+
+          <input class="visually-hidden" type="radio" name="props-slider" id="props-slide-1" checked>
+          <input class="visually-hidden" class="" type="radio" name="props-slider" id="props-slide-2">
+          <label class="props-slider__control" for="props-slide-1">slide-1</label>
+          <label for="props-slider__control">slide-2</label>
         </div>
-
-        <div class="props-slide props-slide-2">
-          <img class="props-slide__img" src="img/menu-slider-2.png" width="620" height="266"
-            alt="Изображение рабочего с перфоратором BOSCH">
-          <h3 class="props-slide__title">Дрели</h3>
-          <p class="props-slide__text">Соседям на радость!</p>
-
-          <a class="props-slide__btn" href="#">Открыть каталог</a>
-        </div>
-
-        <button class="props-slider__prev-btn visually-hidden" type="button">Назад</button>
-        <button class="props-slider__next-btn visually-hidden" type="button">Вперед</button>
-
-        <input class="visually-hidden" type="radio" name="props-slider" id="props-slide-1" checked>
-        <input class="visually-hidden" class="" type="radio" name="props-slider" id="props-slide-2">
-        <label class="props-slider__control" for="props-slide-1">slide-1</label>
-        <label for="props-slider__control">slide-2</label>
+        -->
       </div>
     </section>
 
@@ -232,12 +240,12 @@
     </section>
 
     <section class="services">
+      <!-- 
       <h2 class="services__title">Сервисы</h2>
       <p class="services__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех
         сил, чтобы сделать ваши
         покупки приятными.</p>
 
-      <!-- Слайдер -->
       <div class="services__slider">
         <ul class="services-slider">
           <li class="services-slider__item services-slide-1">
@@ -263,7 +271,7 @@
             </p>
           </li>
         </ul>
-      </div>
+      </div> -->
     </section>
 
     <section class="about">
@@ -272,9 +280,11 @@
         <p class="about__text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
           строительства не оставит
           равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России!br Техномарт работает со
+        <p class="about__text">
+          Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со
           многими транспортными
-          компаниями:</p>
+          компаниями:
+        </p>
         <ul class="about__list">
           <li class="about__item">Деловые линии</li>
           <li class="about__item">Автотрейдинг</li>
@@ -284,7 +294,10 @@
       </div>
       <div class="about__contacts">
         <h2 class="about__title">Контакты</h2>
-        <p class="about__text">Вы можете забрать товар сами, заехав в наш офис:</p>
+        <p class="about__text">
+          Вы можете забрать товар сами,<br>
+          заехав в наш офис:
+        </p>
         <a class="about__map"
           href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSUACQFtjfXVyeXpgZQ==/?ll=30.323054%2C59.938631&sll=30.324836%2C59.938411&sspn=0.023191%2C0.006718&z=17.12">
           <img src="img/footer-map.jpg" width="300" height="158"
@@ -297,69 +310,79 @@
 
   <footer class="footer">
     <div class="footer__menu">
-      <a class="footer__logo" href="">
-        <img src="img/logo-technomart.svg" width="138" height="23"
-          alt="Логотип магазина строительных материалов Техномарт">
-      </a>
+      <div class="footer__menu-wrapper">
+        <div class="footer__logo-nav-container">
+          <a class="footer__logo" href="">
+            <img src="img/logo-technomart.svg" width="138" height="23"
+              alt="Логотип магазина строительных материалов Техномарт">
+          </a>
 
-      <p class="footer__contacts">
-        г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8<br>
-        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-      </p>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#">Компания</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Новости</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="catalog.html">Каталог</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__contacts-props-container">
+          <p class="footer__contacts">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8<br>
+            <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </p>
 
-      <ul class="footer__nav-list">
-        <li class="footer__nav-item">
-          <a href="#">Компания</a>
-        </li>
-        <li class="footer__nav-item">
-          <a href="#">Новости</a>
-        </li>
-        <li class="footer__nav-item">
-          <a href="catalog.html">Каталог</a>
-        </li>
-        <li class="footer__nav-item">
-          <a href="#">Доставка</a>
-        </li>
-        <li class="footer__nav-item">
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="footer__props-list">
-        <li class="footer__props-item">
-          <a href="#">Материалы</a>
-        </li>
-        <li class="footer__props-item">
-          <a href="#">Техника</a>
-        </li>
-        <li class="footer__props-item">
-          <a href="#">Инструмент</a>
-        </li>
-        <li class="footer__props-item">
-          <a href="#">Спецпредложения</a>
-        </li>
-      </ul>
+          <ul class="footer__props-list">
+            <li class="footer__props-item">
+              <a href="#">Материалы</a>
+            </li>
+            <li class="footer__props-item">
+              <a href="#">Техника</a>
+            </li>
+            <li class="footer__props-item">
+              <a href="#">Инструмент</a>
+            </li>
+            <li class="footer__props-item">
+              <a href="#">Спецпредложения</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="footer__social">
-      <p class="footer__copyrights">&copy; 2010&ndash;2019 Компания «Техномарт» Все права защищены</p>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a href="#">Ссылка на страницу Техномарта в Вконтакте</a>
-        </li>
-        <li class="footer__social-item">
-          <a href="#">Ссылка на страницу Техномарта в Фейсбуке</a>
-        </li>
-        <li class="footer__social-item">
-          <a href="#">Ссылка на страницу Техномарта в Инстаграме</a>
-        </li>
-      </ul>
+      <div class="footer__social-wrapper">
+        <p class="footer__copyrights">&copy; 2010&ndash;2019 Компания «Техномарт» Все права защищены</p>
+        <ul class="footer__social-list">
+          <li class="footer__social-item footer__social-item-vk">
+            <a href="#">Ссылка на страницу Техномарта в Вконтакте</a>
+          </li>
+          <li class="footer__social-item footer__social-item-fb">
+            <a href="#">Ссылка на страницу Техномарта в Фейсбуке</a>
+          </li>
+          <li class="footer__social-item footer__social-item-inst">
+            <a href="#">Ссылка на страницу Техномарта в Инстаграме</a>
+          </li>
+        </ul>
 
-      <p class="footer__feedback">Обратная связь: <a class="footer__email"
-          href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-      <p class="footer__credits">
-        Разработано - <a class="footer__dev" href="https://htmlacademy.ru/intensive/htmlcss"
-          target="blank">htmlacademy.ru</a>
-      </p>
+        <div class="footer__feedback-credits-container">
+          <p class="footer__feedback">Обратная связь: <a class="footer__email"
+              href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          <p class="footer__credits">
+            Разработано - <a class="footer__dev" href="https://htmlacademy.ru/intensive/htmlcss"
+              target="blank">htmlacademy.ru</a>
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
