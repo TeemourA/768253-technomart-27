@@ -1,3 +1,4 @@
+
 html {
   box-sizing: border-box;
 }
@@ -768,6 +769,7 @@ a {
   width: 940px;
   margin: 0 auto;
   margin-top: 82px;
+  margin-bottom: 86px;
 }
 
 .about__info {
@@ -845,8 +847,6 @@ a {
 }
 
 .footer {
-  margin-top: 86px;
-
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
@@ -1024,7 +1024,25 @@ a {
   flex-direction: column;
 }
 
+.filter-products-container {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.filter {
+  width: 220px;
+}
+
 .filter__title {
+  display: block;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  background-color: #f7f3ec;
+  
   color: #000000;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -1035,6 +1053,7 @@ a {
 
 .filter__price-fieldset {
   border: none;
+  padding: 0;
 }
 
 .filter__subtitle {
@@ -1046,10 +1065,13 @@ a {
 }
 
 .filter__manufaturers-fieldset {
+  display: flex;  
   border: none;
+  padding: 0;
 }
 
 .filter__label {
+
   color: #000000;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 15px;
@@ -1060,6 +1082,7 @@ a {
 
 .filter__power-fieldset {
   border: none;
+  padding: 0;
 }
 
 .filter__btn {
@@ -1075,13 +1098,36 @@ a {
   cursor: pointer;
 }
 
+.products {
+  width: 700px;
+  margin-left: 20px;
+}
+
 .products__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  margin-top: 21px;
   list-style: none;
 }
 
+.products__list .product-card:nth-child(n+4) {
+  margin-top: 20px;
+}
+
+.products__sort {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f7f3ec;
+}
+
 .products__sort-title {
+  margin: 0;
   color: #000000;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -1100,6 +1146,13 @@ a {
 
 .info {
   background-color: #f2f6f8;
+}
+
+.info__wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding-top: 67px;
+  padding-bottom: 73px;
 }
 
 .info__title {
