@@ -83,15 +83,16 @@ a {
   box-shadow: 0 5px 0 #b72c36;
 }
 
-.logo:hover {
+.logo--link:hover {
   background-color: #ca2c37;
   box-shadow: 0 5px 0 #9c2830;
 }
 
-.logo:active {
+.logo--link:active {
   background-color: #ba2732;
   box-shadow: 0 5px 0 #8d1e26
 }
+
 
 .search-form {
   position: relative;
@@ -121,6 +122,8 @@ a {
   padding-left: 49px;
   background-color: #293449;
   border: none;
+
+  outline: none;
 }
 
 .search-form__input:hover {
@@ -358,12 +361,13 @@ a {
   background-color: #ffffff;
 }
 
-.header__auth--logged:hover path {
+.header__logged-user:hover path,
+.header__user-singout-button:hover path {
   fill: #32425c;
 }
 
-
-.header__logged-user:active path {
+.header__logged-user:active path,
+.header__user-singout-button:active path {
   fill: #c5c5c5;
 }
 
@@ -471,7 +475,6 @@ a {
 }
 
 .header__nav {
-  display: flex;
   padding-top: 64px;
   padding-bottom: 80px;
 }
@@ -486,6 +489,7 @@ a {
 }
 
 .header__nav-link {
+  display: inline-block;
   padding: 0 34px;
   padding-top: 20px;
   padding-bottom: 17px;
@@ -1581,12 +1585,14 @@ a {
 }
 
 .map-popup__container {
-  position: absolute;
+  position: fixed;
 
   bottom: 374px;
   left: 50%;
 
   margin-left: -480px;
+
+  z-index: 100;
 }
 
 .map-popup {
@@ -1615,7 +1621,7 @@ a {
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   bottom: 200px;
   left: 50%;
 
@@ -1626,6 +1632,8 @@ a {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 
   background-color: #ffffff;
+
+  z-index: 100;
 }
 
 .popup__wrapper {
@@ -1941,6 +1949,7 @@ a {
 
 .filter__manufaturers-fieldset {
   display: flex;
+
   border: none;
   border-bottom: 1px solid #eaeaea;
   margin: 0;
@@ -1962,6 +1971,8 @@ a {
   margin-left: 35px;
 
   cursor: default;
+
+  outline: none;
 }
 
 .filter__check-box {
@@ -1987,6 +1998,8 @@ a {
 .filter__checkbox[id="dewalt"]:checked ~ .filter__check-box[for="dewalt"],
 .filter__checkbox[id="hitachi"]:checked ~ .filter__check-box[for="hitachi"] {
   background-image: url("../img/checkbox-on.svg");
+
+  width: 28px;
 }
 
 .filter__checkbox[id="bosch"]:disabled ~ .filter__check-box[for="bosch"],
@@ -2005,6 +2018,16 @@ a {
 .filter__checkbox[id="hitachi"]:checked:disabled ~ .filter__check-box[for="hitachi"] {
   background-image: url("../img/checkbox-on.svg");
   opacity: 0.3;
+
+  width: 28px;
+}
+
+.filter__checkbox[id="bosch"]:focus ~ .filter__check-box[for="bosch"],
+.filter__checkbox[id="interskol"]:focus ~ .filter__check-box[for="interskol"],
+.filter__checkbox[id="makita"]:focus ~ .filter__check-box[for="makita"],
+.filter__checkbox[id="dewalt"]:focus ~ .filter__check-box[for="dewalt"],
+.filter__checkbox[id="hitachi"]:focus ~ .filter__check-box[for="hitachi"] {
+  outline: auto;
 }
 
 .filter__power-fieldset {
@@ -2043,6 +2066,11 @@ a {
 .filter__radio-input[id="socket"]:checked:disabled ~ .filter__radio[for="socket"] {
   background-image: url("../img/radio-on.svg");
   opacity: 0.3;
+}
+
+.filter__radio-input[id="acum"]:focus ~ .filter__radio[for="acum"],
+.filter__radio-input[id="socket"]:focus ~ .filter__radio[for="socket"] {
+  outline: auto;
 }
 
 .button--filter {
@@ -2121,12 +2149,14 @@ a {
   margin-left: 139px;
 }
 
-.products__sort-radio-price:checked ~ .products__sort-type[for="sort-price"],
-.products__sort-radio-type:checked ~ .products__sort-type[for="sort-type"],
-.products__sort-radio-functionality:checked ~ .products__sort-type[for="sort-functionality"] {
+.products__sort-type--active {
+  color: #ee3643;
+  
   border: none;
+}
 
-  color: #ee3643; 
+.products__sort-type--active:hover {
+  border: none;
 }
 
 .products__sort-ascending-button {
@@ -2160,8 +2190,11 @@ a {
   fill: #231f20;
 }
 
-.products__sort-ascending:checked ~ .products__sort-ascending-button[for="sort-ascending"] path,
-.products__sort-descending:checked ~ .products__sort-descending-button[for="sort-descending"] path {
+.products__sort-button--active path {
+  fill: #ee3643;
+}
+
+.products__sort-button--active:hover path {
   fill: #ee3643;
 }
 
@@ -2248,7 +2281,7 @@ a {
 }
 
 .popup-add {
-  position: absolute;
+  position: fixed;
   top: 18%;
   left: 50%;
 
@@ -2258,6 +2291,8 @@ a {
   background-color: #ffffff;
   border-top: 7px solid #ff5357;
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+
+  z-index: 100;
 }
 
 .popup-add__title {
