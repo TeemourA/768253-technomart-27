@@ -20,3 +20,45 @@ addToCartContinueButton.addEventListener('click', (evt) => {
   evt.preventDefault();
   addToCartPopup.classList.add('visually-hidden');
 });
+
+// Catalog sort links-buttons
+
+const sortByPriceButton = document.querySelector('.products__sort--price');
+const sortByTypeButton = document.querySelector('.products__sort--type');
+const sortByFunctionalityButton = document.querySelector('.products__sort--functionality');
+
+sortByPriceButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  sortByPriceButton.classList.add('products__sort-type--active');
+  sortByTypeButton.classList.remove('products__sort-type--active');
+  sortByFunctionalityButton.classList.remove('products__sort-type--active');
+});
+
+sortByTypeButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  sortByPriceButton.classList.remove('products__sort-type--active');
+  sortByTypeButton.classList.add('products__sort-type--active');
+  sortByFunctionalityButton.classList.remove('products__sort-type--active');
+});
+
+sortByFunctionalityButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  sortByPriceButton.classList.remove('products__sort-type--active');
+  sortByTypeButton.classList.remove('products__sort-type--active');
+  sortByFunctionalityButton.classList.add('products__sort-type--active');
+});
+
+const sortByAscending = document.querySelector('.products__sort-ascending-button');
+const sortByDescending = document.querySelector('.products__sort-descending-button');
+
+sortByAscending.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  sortByAscending.classList.add('products__sort-button--active');
+  sortByDescending.classList.remove('products__sort-button--active');
+});
+
+sortByDescending.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  sortByAscending.classList.remove('products__sort-button--active');
+  sortByDescending.classList.add('products__sort-button--active');
+});
