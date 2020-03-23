@@ -8,17 +8,26 @@ const addToCartContinueButton = document.querySelector('.button--continue');
 addToCartButtons.forEach(button => {
   button.addEventListener('click', (evt) => {
     evt.preventDefault();
-    addToCartPopup.classList.remove('visually-hidden');
+    addToCartPopup.classList.add('popup-show');
   });
 });
 
 addToCartCloseButton.onclick = () => {
-  addToCartPopup.classList.add('visually-hidden');
+  addToCartPopup.classList.remove('popup-show');
 };
 
 addToCartContinueButton.addEventListener('click', (evt) => {
   evt.preventDefault();
-  addToCartPopup.classList.add('visually-hidden');
+  addToCartPopup.classList.remove('popup-show');
+});
+
+window.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (addToCartPopup.classList.contains('popup-show')) {
+      addToCartPopup.classList.remove('popup-show');
+    }
+  }
 });
 
 // Catalog sort links-buttons
