@@ -65,7 +65,7 @@ mapCloseButton.onclick = () => {
 
 const feedbackPopup = document.querySelector('.popup');
 const feedbackCallButton = document.querySelector('.button--about-feedback');
-const feedbackCloseButton = document.querySelector('.button--close-popup');
+const feedbackCloseButton = document.querySelector('.button--close-feedback');
 
 const feedbackForm = document.querySelector('.popup__form');
 const feedbackNameInput = document.querySelector('[name=name]');
@@ -100,9 +100,40 @@ window.addEventListener('keydown', (evt) => {
 
 submitFeedbackButton.addEventListener('click', (evt) => {
   if (isInputEmpty(feedbackNameInput.value) || isInputEmpty(feedbackEmailInput.value) || isInputEmpty(feedbackContentInput.value)) {
-    evt.preventDefault();
     feedbackPopup.classList.remove('popup-error');
     feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
     feedbackPopup.classList.add('popup-error');
+  }
+});
+
+// Add item popup
+
+const addToCartButtons = document.querySelectorAll('.button--buy');
+const addToCartPopup = document.querySelector('.popup-add');
+const addToCartCloseButton = document.querySelector('.button--close-add');
+const addToCartContinueButton = document.querySelector('.button--continue');
+
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    addToCartPopup.classList.add('popup-show');
+  });
+});
+
+addToCartCloseButton.onclick = () => {
+  addToCartPopup.classList.remove('popup-show');
+};
+
+addToCartContinueButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  addToCartPopup.classList.remove('popup-show');
+});
+
+window.addEventListener('keydown', (evt) => {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (addToCartPopup.classList.contains('popup-show')) {
+      addToCartPopup.classList.remove('popup-show');
+    }
   }
 });

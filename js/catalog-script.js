@@ -1,8 +1,8 @@
-// Catalog popup
+// Add item popup
 
 const addToCartButtons = document.querySelectorAll('.button--buy');
 const addToCartPopup = document.querySelector('.popup-add');
-const addToCartCloseButton = document.querySelector('.button--close-popup');
+const addToCartCloseButton = document.querySelector('.button--close-add');
 const addToCartContinueButton = document.querySelector('.button--continue');
 
 addToCartButtons.forEach(button => {
