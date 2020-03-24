@@ -54,11 +54,11 @@ const mapCloseButton = document.querySelector('.button--close-map');
 
 mapCallButton.addEventListener('click', (evt) => {
   evt.preventDefault();
-  mapPopup.classList.add('popup-show');
+  mapPopup.classList.remove('visually-hidden');
 });
 
 mapCloseButton.onclick = () => {
-  mapPopup.classList.remove('popup-show');
+  mapPopup.classList.add('visually-hidden');
 };
 
 // Feedback popup
