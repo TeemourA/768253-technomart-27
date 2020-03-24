@@ -526,11 +526,14 @@ a {
 
 .header__nav-link {
   display: inline-block;
+  vertical-align: middle;
+
   padding: 0px;
   padding-top: 20px;
   padding-bottom: 17px;
   padding-left: 33px;
   padding-right: 33px;
+
   text-align: center;
   border-bottom: 5px solid #293449;
   background-color: #32425c;
@@ -1499,11 +1502,13 @@ a {
 
 .about__item::before {
   content: "";
+
   display: inline-block;
+  vertical-align: middle;
+
   height: 2px;
   width: 25px;
   margin-right: 10px;
-  vertical-align: middle;
   background-color: #ee3643;
 }
 
@@ -1945,13 +1950,14 @@ a {
 
 .breadcrumbs__item:not(:first-child)::before {
   display: inline-block;
+  vertical-align: middle;
+
   content: "";
 
   width: 8px;
   height: 12px;
   margin-right: 16px;
 
-  vertical-align: middle;
 
   background-image: url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
@@ -2081,6 +2087,8 @@ a {
 
 .filter__price-controls label {
   display: inline-block;
+  vertical-align: middle;
+
   width: 50%;
 
   font-size: 16px;
@@ -2124,7 +2132,7 @@ a {
 .filter__max-price::before {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 18px;
   left: -5px;
 
   width: 10px;
@@ -2508,6 +2516,7 @@ a {
   position: relative;
 
   display: inline-block;
+  vertical-align: middle;
 
   margin: 0;
   margin-top: 70px;
